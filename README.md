@@ -65,4 +65,4 @@ this to more cities across India.
 ## About me
 I'm Vidhisha, a CSE(AIML) graduate from Hyderabad with a focus on AI/ML and NLP.  
 Mail: vidhishamantravadi18@gmail.com  
-LinkedIn: https://linkedin.com/in/mantravadi-vidhisha
+LinkedIn: https://www.linkedin.com/in/mantravadi-vidhisha-a685013a0/

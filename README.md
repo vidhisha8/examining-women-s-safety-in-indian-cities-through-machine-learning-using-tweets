@@ -54,4 +54,4 @@ The biggest challenge was cleaning raw social media text. Tweets contain slang, 
 ## About Me
 I'm **Mantravadi Vidhisha**, a B.Tech CSE (AI & ML) graduate from Hyderabad passionate about Python development, SQL, and applied AI/NLP.
 * **Email:** vidhishamantravadi18@gmail.com
-* **LinkedIn:** https://www.linkedin.com/in/mantravadi-vidhisha-a685013a0/
+* **LinkedIn:** https://www.linkedin.com/in/mantravadi-vidhisha/

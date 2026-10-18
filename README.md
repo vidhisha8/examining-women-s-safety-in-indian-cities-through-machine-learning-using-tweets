@@ -2,7 +2,7 @@
 
 ## About the Project
 
-Women's safety is an important social concern in India. This final-year academic project explores public discussion around women's safety by analyzing sentiment in historical Twitter data.
+Women's safety is an important social concern in India. This project explores public discussion around women's safety by analyzing sentiment in historical Twitter data.
 
 The project uses Python and Natural Language Processing (NLP) techniques to preprocess tweet text and classify sentiment as **Negative, Neutral, or Positive** using TextBlob polarity scores.
 

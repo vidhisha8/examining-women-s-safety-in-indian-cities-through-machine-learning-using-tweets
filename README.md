@@ -1,68 +1,57 @@
-# Women's Safety Analysis in Indian Cities Using ML and NLP
+# Women's Safety Sentiment Analysis in Indian Cities (NLP & ML)
 
 ## What is this project about?
-I built this as my final year project to address something that genuinely 
-concerned me — women's safety in India. Instead of just reading about the 
-problem, I wanted to quantify it using real public data.
+I built this as my final-year project to address an issue that genuinely concerns me — women's safety in India. Instead of just reading about the problem, I wanted to analyze public discourse around it using real-world social media data.
 
-The idea was simple: people talk about women's safety on Twitter every day. 
-What if we could collect all of that, clean it up, and use machine learning 
-to understand how the public actually feels about this issue across different 
-cities?
+People discuss women's safety on Twitter/X every day. The goal of this project is to take historical public tweet datasets, clean the noisy text, and apply Natural Language Processing (NLP) and Machine Learning classifiers to quantify public sentiment across major Indian cities.
 
 ## What I built
-An end-to-end pipeline that collects tweets, cleans and processes the text, 
-runs it through a CNN-based sentiment classifier, and displays the results 
-in a desktop application built with Tkinter and MySQL.
+An end-to-end desktop application built with **Python (Tkinter)** and **MySQL** that:
+1. Ingests curated Twitter datasets covering 5 major Indian cities — **Delhi, Mumbai, Pune, Chennai, and Hyderabad**.
+2. Applies an automated NLP preprocessing pipeline (lowercasing, punctuation/URL removal, stop-word removal using **NLTK**, and **TF-IDF** feature extraction).
+3. Trains and compares Machine Learning and Deep Learning classifiers (**SVM, Naive Bayes, and CNN**) to classify tweets into Positive, Negative, or Neutral categories.
+4. Stores processed records in a **MySQL** relational database and visualizes sentiment distribution charts directly in the GUI.
 
-I focused on 5 cities — Delhi, Mumbai, Pune, Chennai, and Hyderabad.
+## Key Findings
+Across the evaluated urban tweet dataset, the classification results highlighted a stark trend:
+* **74.6%** of discourse was classified as **Negative**
+* **22.3%** was classified as **Neutral**
+* **3.1%** was classified as **Positive**
 
-## What the results showed
-The numbers were honestly striking:
-- **74.6%** of tweets were negative
-- **22.3%** were neutral  
-- Only **3.1%** were positive
+These findings align closely with national survey data indicating that up to 86% of working women in India report safety concerns in urban transit and public spaces.
 
-This aligned closely with a real-world survey showing 86% of working women 
-in India report safety concerns — which gave me confidence that the model 
-was actually capturing something real, not just noise.
+## Tech Stack
+* **Programming Language:** Python
+* **Data Processing & NLP:** Pandas, NumPy, NLTK (Stopwords, Tokenization), Scikit-Learn (TF-IDF Vectorizer)
+* **Machine Learning / Deep Learning:** Scikit-Learn (SVM, Naive Bayes), Keras / TensorFlow (CNN Classifier)
+* **Frontend / GUI:** Tkinter (Python Desktop GUI)
+* **Database:** MySQL (`mysql-connector-python`)
+* **Data Source:** Offline Curated Twitter Dataset (CSV)
 
-## Tech stack
-- **Language:** Python
-- **ML/DL:** CNN, SVM, Naive Bayes (Scikit-learn)
-- **NLP:** TF-IDF, text cleaning, feature extraction
-- **App:** Tkinter (desktop UI), MySQL (database)
-- **Data source:** Twitter (500M+ daily tweets processed)
+## How to Run Locally
 
-## How to run it
-
-```bash
-# Clone the repo
+# 1. Clone the repository
 git clone https://github.com/vidhisha8/womens-safety-nlp-analysis.git
 cd womens-safety-nlp-analysis
 
-# Install dependencies
-pip install scikit-learn pandas numpy nltk mysql-connector-python
+# 2. Install required dependencies
+pip install scikit-learn pandas numpy nltk tensorflow matplotlib mysql-connector-python
 
-# Set up the database
-# Import the SQL file provided in /database folder into MySQL
+# 3. Set up the MySQL Database
+# Open MySQL Workbench or CLI and import the SQL schema located in the /database folder
 
-# Run the app
+# 4. Run the Tkinter application
 python main.py
-```
 
-## Challenges I faced
-The biggest challenge was cleaning raw tweet data — slang, emojis, mixed 
-languages, and abbreviations made preprocessing much harder than I expected. 
-I spent a significant chunk of time just getting the text cleaning pipeline 
-right before any ML could happen.
+## Challenges I Faced
+The biggest challenge was cleaning raw social media text. Tweets contain slang, emojis, URLs, @mentions, mixed languages (Hinglish), and inconsistent punctuation. Getting the regex cleaning, stop-word filtering, and TF-IDF vectorization pipeline right was critical before feeding the features into the classification models.
 
-## What I'd improve
-If I were to extend this, I'd add real-time Twitter API integration and 
-expand to platforms like Instagram and Facebook. I'd also love to scale 
-this to more cities across India.
+## Future Improvements
+* Transition the desktop Tkinter UI to a web-based **Django** or **Streamlit** dashboard.
+* Integrate live social media scraping / API streaming for real-time trend monitoring.
+* Experiment with transformer-based models (like BERT or LLM APIs) to better capture sarcasm and bilingual context.
 
-## About me
-I'm Vidhisha, a CSE(AIML) graduate from Hyderabad with a focus on AI/ML and NLP.  
-Mail: vidhishamantravadi18@gmail.com  
-LinkedIn: https://www.linkedin.com/in/mantravadi-vidhisha-a685013a0/
+## About Me
+I'm **Mantravadi Vidhisha**, a B.Tech CSE (AI & ML) graduate from Hyderabad passionate about Python development, SQL, and applied AI/NLP.
+* **Email:** vidhishamantravadi18@gmail.com
+* **LinkedIn:** https://www.linkedin.com/in/mantravadi-vidhisha-a685013a0/
